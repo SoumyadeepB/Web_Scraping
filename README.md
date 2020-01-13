@@ -1,2 +1,2 @@
-# Web_Scraping
+# Web Scraping
 Scraping Data from Websites and displaying them in an HTML format
