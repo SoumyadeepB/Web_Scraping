@@ -8,7 +8,8 @@
 import scrapy
 
 
-class FanfictionItem(scrapy.Item):
+class BookItems(scrapy.Item):
     # define the fields for your item here like:
-    # name = scrapy.Field()
-    pass
+    title = scrapy.Field()
+    link = scrapy.Field()
+    
