@@ -1,6 +1,7 @@
 import scrapy
 from scrapy import Request
 import json
+from dicttoxml import dicttoxml
 
 
 class Books(scrapy.Spider):
@@ -21,6 +22,12 @@ class Books(scrapy.Spider):
 
         f = open("books.json", "w")
         f.write(json.dumps(book_list))
+        f.close()
+
+        xml = dicttoxml(book_list,
+                        custom_root="Books", attr_type=True)
+        f = open("Books.xml", "wb")
+        f.write(xml)
         f.close()
 
         for title in book_list:
@@ -54,7 +61,16 @@ class Books(scrapy.Spider):
                 'author': authors[i],
                 'text': texts[i]
             })
+
+       # Write JSON
         f = open(book_title+".json", "w")
         f.write(json.dumps(review_list[book_title]))
+        f.close()
+
+        # Write XML
+        xml = dicttoxml(review_list[book_title],
+                        custom_root="".join(book_title.split()), attr_type=False)
+        f = open(book_title+".xml", "wb")
+        f.write(xml)
         f.close()
         yield review_list
