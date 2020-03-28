@@ -3,7 +3,6 @@ from scrapy import Request
 import json
 from dicttoxml import dicttoxml
 
-
 class Books(scrapy.Spider):
     name = 'books'
     start_urls = ['https://www.fanfiction.net/book/']
