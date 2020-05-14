@@ -1,9 +1,9 @@
 # Web Scraping
 
-Goal: Scraping Data from Websites and displaying them in an HTML format
-Libraries Used: Scrapy, json2html, XSLT
-Website Scraped: fanfiction.net
-Running Instructions: Run 'books_spider.py' to start automatic scraping 
+- Goal: Scraping Data from Websites and displaying them in an HTML format
+- Libraries Used: Scrapy, json2html, XSLT
+- Website Scraped: fanfiction.net
+- Running Instructions: Run 'books_spider.py' to start automatic scraping 
 
 ![image](https://user-images.githubusercontent.com/12089275/81996246-dd239900-964c-11ea-9035-e60620211ede.png)
 
