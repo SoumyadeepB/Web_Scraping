@@ -2,6 +2,7 @@ import json
 from json2html import *
 import os
 
+
 for filename in os.listdir("E:\Assignments\Text Technology Project"):
     if filename.endswith(".json"):
         fin = open(filename, "r")
